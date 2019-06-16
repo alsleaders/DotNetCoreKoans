@@ -169,29 +169,29 @@ namespace DotNetCoreKoans.Koans
 
 
 
-    [Step(13)]
-    public void ForStatement()
-    {
-      var list = new List<string> { "fish", "and", "chips" };
-      for (int i = 0; i < list.Count; i++)
-      {
-        list[i] = (list[i].ToUpper());
-      }
-      Assert.Equal(List { "FISH", "AND", "CHIPS" }, list);
-    }
+    // [Step(13)]
+    // public void ForStatement()
+    // {
+    //   var list = new List<string> { "fish", "and", "chips" };
+    //   for (int i = 0; i < list.Count; i++)
+    //   {
+    //     list[i] = (list[i].ToUpper());
+    //   }
+    //   Assert.Equal(List<string> { "FISH", "AND", "CHIPS" }, list);
+    // }
 
-    [Step(14)]
-    public void ForEachStatement()
-    {
-      var list = new List<string> { "fish", "and", "chips" };
-      var finalList = new List<string>();
-      foreach (string item in list)
-      {
-        finalList.Add(item.ToUpper());
-      }
-      Assert.Equal(FILL_ME_IN, list);
-      Assert.Equal(FILL_ME_IN, finalList);
-    }
+    // [Step(14)]
+    // public void ForEachStatement()
+    // {
+    //   var list = new List<string> { "fish", "and", "chips" };
+    //   var finalList = new List<string>();
+    //   foreach (string item in list)
+    //   {
+    //     finalList.Add(item.ToUpper());
+    //   }
+    //   Assert.Equal({ "fish", "and", "chips" }, list);
+    //   Assert.Equal({ "FISH", "AND", "CHIPS" }, finalList);
+    // }
 
     [Step(15)]
     public void ModifyingACollectionDuringForEach()
@@ -206,7 +206,7 @@ namespace DotNetCoreKoans.Koans
       }
       catch (Exception ex)
       {
-        Assert.Equal(typeof(FillMeIn), ex.GetType());
+        Assert.Equal(typeof(InvalidOperationException), ex.GetType());
       }
     }
 
@@ -235,7 +235,7 @@ namespace DotNetCoreKoans.Koans
         whoCaughtTheException = "When we tried to move to the next item in the list";
       }
 
-      Assert.Equal(FILL_ME_IN, whoCaughtTheException);
+      Assert.Equal("When we tried to move to the next item in the list", whoCaughtTheException);
     }
   }
 }
