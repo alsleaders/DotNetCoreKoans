@@ -169,29 +169,29 @@ namespace DotNetCoreKoans.Koans
 
 
 
-    // [Step(13)]
-    // public void ForStatement()
-    // {
-    //   var list = new List<string> { "fish", "and", "chips" };
-    //   for (int i = 0; i < list.Count; i++)
-    //   {
-    //     list[i] = (list[i].ToUpper());
-    //   }
-    //   Assert.Equal(List<string> { "FISH", "AND", "CHIPS" }, list);
-    // }
+    [Step(13)]
+    public void ForStatement()
+    {
+      var list = new List<string> { "fish", "and", "chips" };
+      for (int i = 0; i < list.Count; i++)
+      {
+        list[i] = (list[i].ToUpper());
+      }
+      Assert.Equal(new List<string> { "FISH", "AND", "CHIPS" }, list);
+    }
 
-    // [Step(14)]
-    // public void ForEachStatement()
-    // {
-    //   var list = new List<string> { "fish", "and", "chips" };
-    //   var finalList = new List<string>();
-    //   foreach (string item in list)
-    //   {
-    //     finalList.Add(item.ToUpper());
-    //   }
-    //   Assert.Equal({ "fish", "and", "chips" }, list);
-    //   Assert.Equal({ "FISH", "AND", "CHIPS" }, finalList);
-    // }
+    [Step(14)]
+    public void ForEachStatement()
+    {
+      var list = new List<string> { "fish", "and", "chips" };
+      var finalList = new List<string>();
+      foreach (string item in list)
+      {
+        finalList.Add(item.ToUpper());
+      }
+      Assert.Equal(new List<string> { "fish", "and", "chips" }, list);
+      Assert.Equal(new List<string> { "FISH", "AND", "CHIPS" }, finalList);
+    }
 
     [Step(15)]
     public void ModifyingACollectionDuringForEach()
